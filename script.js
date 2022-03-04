@@ -30,8 +30,18 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   function checkRequired(inputArr) {
-    inputArr.forEach(function (input) {});
+    inputArr.forEach(function (input) {
+      if (input.value.trim() === "") {
+        showError(input, `${getFieldName(input)} is Required`);
+      } else {
+        showSuccess(input);
+      }
+    });
   }
-
   checkRequired([username, email, password, password2]);
 });
+
+//Get fieldname
+function getFieldName(input) {
+  return input.className.charAt(0).toUpperCase() + input.className.slice(1);
+}
