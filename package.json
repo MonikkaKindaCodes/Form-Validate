@@ -1,0 +1,11 @@
+{
+  "name": "form-validator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "sass main.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
